@@ -23,7 +23,7 @@ vcgBary <- function(mesh) {
     mesh <- meshintegrity(mesh,facecheck = TRUE)
     vb <- mesh$vb[1:3,,drop=FALSE]
     it <- (mesh$it-1)
-    out <- .Call("Rbarycenter",mesh)
+    out <- .Call("Rbarycenter",mesh,"Rvcg")
     return(t(out))
 }
 
